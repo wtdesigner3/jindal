@@ -36776,3 +36776,69 @@ header.style-4 .mobile-logo-area .menu-close-btn:hover i {
 .testimonial-card .author-area {
   margin-top: auto;
 }
+
+.page-header {
+  position: relative;
+  min-height: 350px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.page-header-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.page-header-content h1 {
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.breadcrumb-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.breadcrumb-list li {
+  color: #fff;
+}
+
+.breadcrumb-list li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.breadcrumb-list li:not(:last-child)::after {
+  content: "/";
+  margin-left: 10px;
+}
+
+.h-tags::after {
+  content: "";
+  background-color: var(--accent);
+  width: 4px;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
+}
