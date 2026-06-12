@@ -4,34 +4,79 @@ import Link from "next/link";
 import Image from "next/image";
 import { X } from "lucide-react";
 import { useState } from "react";
+import { menuData } from "./Header";
+
+
+function MobileMenuItem({
+  item,
+  openMenus,
+  toggleMenu,
+  closeMenu,
+}) {
+  const hasChildren = item.children?.length > 0;
+
+  return (
+    <li className={hasChildren ? "menu-item-has-children" : ""}>
+      {hasChildren ? (
+        <>
+          <div
+            className="d-flex justify-content-between align-items-center"
+            onClick={() => toggleMenu(item.id)}
+            style={{ cursor: "pointer" }}
+          >
+            <span>{item.title}</span>
+            <span>{openMenus[item.id] ? "-" : "+"}</span>
+          </div>
+
+          {openMenus[item.id] && (
+            <ul className="sub-menu">
+              {item.children.map((child) => (
+                <MobileMenuItem
+                  key={child.id}
+                  item={child}
+                  openMenus={openMenus}
+                  toggleMenu={toggleMenu}
+                  closeMenu={closeMenu}
+                />
+              ))}
+            </ul>
+          )}
+        </>
+      ) : (
+        <Link href={item.slug} onClick={closeMenu}>
+          {item.title}
+        </Link>
+      )}
+    </li>
+  );
+}
 
 export default function MobileMenu({
   mobileMenu,
   setMobileMenu,
 }) {
-  const [productOpen, setProductOpen] = useState(false);
-  const [corporateOpen, setCorporateOpen] = useState(false);
-  const [infraOpen, setInfraOpen] = useState(false);
-  const [categoryOpen, setCategoryOpen] = useState(false);
+  const [openMenus, setOpenMenus] = useState({});
+
+  const toggleMenu = (id) => {
+    setOpenMenus((prev) => ({
+      ...prev,
+      [id]: !prev[id],
+    }));
+  };
 
   const closeMenu = () => {
     setMobileMenu(false);
-    setProductOpen(false);
-    setCorporateOpen(false);
-    setInfraOpen(false);
-    setCategoryOpen(false);
+    setOpenMenus({});
   };
 
   return (
     <>
-      {/* Overlay */}
       <div
         className={`mobile-menu-overlay ${mobileMenu ? "active" : ""
           }`}
         onClick={closeMenu}
       />
 
-      {/* Mobile Menu */}
       <div
         className={`mobile-menu-wrapper main-menu ${mobileMenu ? "show-menu" : ""
           }`}
@@ -55,102 +100,15 @@ export default function MobileMenu({
         </div>
 
         <ul className="menu-list">
-          <li>
-            <Link href="/about" onClick={closeMenu}>About Us</Link>
-          </li>
-
-          {/* Products */}
-          <li className="menu-item-has-children">
-            <div
-              className="d-flex justify-content-between"
-              onClick={() => setProductOpen(!productOpen)}
-            >
-              <span>Our Products</span>
-              <span>{productOpen ? "-" : "+"}</span>
-            </div>
-
-            {productOpen && (
-              <ul className="sub-menu">
-                <li className="menu-item-has-children">
-                  <div
-                    className="d-flex justify-content-between"
-                    onClick={() => setCategoryOpen(!categoryOpen)}
-                  >
-                    <span>Category</span>
-                    <span>{categoryOpen ? "-" : "+"}</span>
-                  </div>
-                  {categoryOpen && (
-                    <ul className="sub-menu">
-                      <li>
-                        <Link href="/product/stainless-steel" onClick={closeMenu}>
-                          Product 1 (Stainless Steel)
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="/product/edge-condition" onClick={closeMenu}>
-                          Product 2 (Edge Condition)
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="/product/tolerances" onClick={closeMenu}>
-                          Product 3 (Tolerances)
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="/product/hardness-ranges" onClick={closeMenu}>
-                          Product 4 (Hardness Ranges)
-                        </Link>
-                      </li>
-                    </ul>
-                  )}
-                </li>
-              </ul>
-            )}
-          </li>
-
-          {/* Corporate */}
-          <li className="menu-item-has-children">
-            <div
-              className="d-flex justify-content-between"
-              onClick={() => setCorporateOpen(!corporateOpen)}
-            >
-              <span>Corporate Information</span>
-              <span>{corporateOpen ? "-" : "+"}</span>
-            </div>
-
-            {corporateOpen && (
-              <ul className="sub-menu">
-                <li>
-                  <Link href="/csr" onClick={closeMenu}>CSR</Link>
-                </li>
-              </ul>
-            )}
-          </li>
-
-          {/* Infrastructure */}
-          <li className="menu-item-has-children">
-            <div
-              className="d-flex justify-content-between"
-              onClick={() => setInfraOpen(!infraOpen)}
-            >
-              <span>Infrastructure</span>
-              <span>{infraOpen ? "-" : "+"}</span>
-            </div>
-
-            {infraOpen && (
-              <ul className="sub-menu">
-                <li>
-                  <Link href="/infrastructure" onClick={closeMenu}>
-                    Cold Rolled Precision Stainless Steel Strips
-                  </Link>
-                </li>
-              </ul>
-            )}
-          </li>
-
-          <li>
-            <Link href="/blogs" onClick={closeMenu}>Blogs</Link>
-          </li>
+          {menuData.map((item) => (
+            <MobileMenuItem
+              key={item.id}
+              item={item}
+              openMenus={openMenus}
+              toggleMenu={toggleMenu}
+              closeMenu={closeMenu}
+            />
+          ))}
         </ul>
 
         <div className="contact-area mt-4">

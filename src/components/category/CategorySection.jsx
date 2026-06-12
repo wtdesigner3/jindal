@@ -12,7 +12,7 @@ const products = [
         tag: "Steel",
         title: "Stainless Steel",
         cta: "View grades & tolerances",
-        slug: "/product/stainless-steel",
+        slug: "/stainless-steel/stainless-steel",
     },
     {
         id: 2,
@@ -20,7 +20,7 @@ const products = [
         tag: "Steel",
         title: "Edge Condition",
         cta: "View grades & tolerances",
-        slug: "/product/edge-condition",
+        slug: "/stainless-steel/edge-condition",
     },
     {
         id: 3,
@@ -28,7 +28,7 @@ const products = [
         tag: "Steel",
         title: "Tolerances",
         cta: "View grades & tolerances",
-        slug: "/product/tolerances",
+        slug: "/stainless-steel/tolerances",
     },
     {
         id: 4,
@@ -36,7 +36,7 @@ const products = [
         tag: "Steel",
         title: "Hardness Ranges",
         cta: "View grades & tolerances",
-        slug: "/product/hardness-ranges",
+        slug: "/stainless-steel/hardness-ranges",
     },
     {
         id: 5,
@@ -44,7 +44,7 @@ const products = [
         tag: "Steel",
         title: "Hardness Ranges",
         cta: "View grades & tolerances",
-        slug: "/product/hardness-ranges",
+        slug: "/stainless-steel/hardness-ranges",
     },
 ];
 

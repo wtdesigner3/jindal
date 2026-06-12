@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-export default function ProductDetails({ product, relatedProducts = [] }) {
+export default function ProductDetails({ product, relatedProducts = [], category = "stainless-steel" }) {
     return (
         <section className="project-details-page my-5 ">
             <div className="container">
@@ -50,7 +50,7 @@ export default function ProductDetails({ product, relatedProducts = [] }) {
                                 <ul className="category-list">
                                     {relatedProducts.map((item) => (
                                         <li key={item.slug}>
-                                            <Link href={`/products/${item.slug}`}>
+                                            <Link href={`/${category}/${item.slug}`}>
                                                 <span>
                                                     <svg
                                                         width="12"

@@ -17,7 +17,7 @@ export default function ProductSection() {
       tag: "Steel",
       title: "Stainless Steel",
       cta: "View grades & tolerances",
-      slug: "/product/stainless-steel",
+      slug: "/stainless-steel/stainless-steel",
     },
     {
       id: 2,
@@ -25,7 +25,7 @@ export default function ProductSection() {
       tag: "Steel",
       title: "Edge Condition",
       cta: "View grades & tolerances",
-      slug: "/product/edge-condition",
+      slug: "/stainless-steel/edge-condition",
     },
     {
       id: 3,
@@ -33,7 +33,7 @@ export default function ProductSection() {
       tag: "Steel",
       title: "Tolerances",
       cta: "View grades & tolerances",
-      slug: "/product/tolerances",
+      slug: "/stainless-steel/tolerances",
     },
     {
       id: 4,
@@ -41,7 +41,7 @@ export default function ProductSection() {
       tag: "Steel",
       title: "Hardness Ranges",
       cta: "View grades & tolerances",
-      slug: "/product/hardness-ranges",
+      slug: "/stainless-steel/hardness-ranges",
     },
     {
       id: 5,
@@ -49,7 +49,7 @@ export default function ProductSection() {
       tag: "Steel",
       title: "Hardness Ranges",
       cta: "View grades & tolerances",
-      slug: "/product/hardness-ranges",
+      slug: "/stainless-steel/hardness-ranges",
     },
   ];
 
