@@ -17,7 +17,7 @@ export default function ProductSection() {
       tag: "Steel",
       title: "Stainless Steel",
       cta: "View grades & tolerances",
-      slug: "/products/stainless-steel",
+      slug: "/product/stainless-steel",
     },
     {
       id: 2,
@@ -25,7 +25,7 @@ export default function ProductSection() {
       tag: "Steel",
       title: "Edge Condition",
       cta: "View grades & tolerances",
-      slug: "/products/edge-condition",
+      slug: "/product/edge-condition",
     },
     {
       id: 3,
@@ -33,7 +33,7 @@ export default function ProductSection() {
       tag: "Steel",
       title: "Tolerances",
       cta: "View grades & tolerances",
-      slug: "/products/tolerances",
+      slug: "/product/tolerances",
     },
     {
       id: 4,
@@ -41,7 +41,7 @@ export default function ProductSection() {
       tag: "Steel",
       title: "Hardness Ranges",
       cta: "View grades & tolerances",
-      slug: "/products/hardness-ranges",
+      slug: "/product/hardness-ranges",
     },
     {
       id: 5,
@@ -49,22 +49,22 @@ export default function ProductSection() {
       tag: "Steel",
       title: "Hardness Ranges",
       cta: "View grades & tolerances",
-      slug: "/products/hardness-ranges",
+      slug: "/product/hardness-ranges",
     },
   ];
 
   return (
     <section className="home2-service-section section my-0">
       <div className="container">
-        <div className="row g-4 align-items-center justify-content-between mb-70">
-          <div className="col-lg-6">
-            <div className="section-title two">
+        <div className="row g-4 align-items-center justify-content-between mb-30">
+          <div className="col-lg-8">
+            <div className="section-title two ">
               <span>Our Products</span>
               <h2>Our Range of Products</h2>
             </div>
           </div>
 
-          <div className="col-lg-3 d-flex justify-content-lg-end btn_wrapper">
+          {/* <div className="col-lg-3 d-flex justify-content-lg-end btn_wrapper">
             <Link href="/products" className="primary-btn3 transparent">
               <span>View All Products</span>
               <span>View All Products</span>
@@ -81,7 +81,7 @@ export default function ProductSection() {
                 </g>
               </svg>
             </Link>
-          </div>
+          </div> */}
         </div>
 
         <div className="home2-service-slider-area">

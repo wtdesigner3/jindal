@@ -12,25 +12,32 @@ export default function MobileMenu({
   const [productOpen, setProductOpen] = useState(false);
   const [corporateOpen, setCorporateOpen] = useState(false);
   const [infraOpen, setInfraOpen] = useState(false);
+  const [categoryOpen, setCategoryOpen] = useState(false);
+
+  const closeMenu = () => {
+    setMobileMenu(false);
+    setProductOpen(false);
+    setCorporateOpen(false);
+    setInfraOpen(false);
+    setCategoryOpen(false);
+  };
 
   return (
     <>
       {/* Overlay */}
       <div
-        className={`mobile-menu-overlay ${
-          mobileMenu ? "active" : ""
-        }`}
-        onClick={() => setMobileMenu(false)}
+        className={`mobile-menu-overlay ${mobileMenu ? "active" : ""
+          }`}
+        onClick={closeMenu}
       />
 
       {/* Mobile Menu */}
       <div
-        className={`mobile-menu-wrapper main-menu ${
-          mobileMenu ? "show-menu" : ""
-        }`}
+        className={`mobile-menu-wrapper main-menu ${mobileMenu ? "show-menu" : ""
+          }`}
       >
         <div className="mobile-logo-area d-flex align-items-center justify-content-between">
-          <Link href="/">
+          <Link href="/" onClick={closeMenu}>
             <Image
               src="/images/logo.png"
               alt="Logo"
@@ -41,7 +48,7 @@ export default function MobileMenu({
 
           <button
             className="menu-close-btn"
-            onClick={() => setMobileMenu(false)}
+            onClick={closeMenu}
           >
             <X size={28} />
           </button>
@@ -49,7 +56,7 @@ export default function MobileMenu({
 
         <ul className="menu-list">
           <li>
-            <Link href="/about">About Us</Link>
+            <Link href="/about" onClick={closeMenu}>About Us</Link>
           </li>
 
           {/* Products */}
@@ -64,25 +71,38 @@ export default function MobileMenu({
 
             {productOpen && (
               <ul className="sub-menu">
-                <li>
-                  <Link href="/stainless-steel">
-                    Stainless Steel
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/edge-condition">
-                    Edge Condition
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/tolerances">
-                    Tolerances
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/hardness-ranges">
-                    Hardness Ranges
-                  </Link>
+                <li className="menu-item-has-children">
+                  <div
+                    className="d-flex justify-content-between"
+                    onClick={() => setCategoryOpen(!categoryOpen)}
+                  >
+                    <span>Category</span>
+                    <span>{categoryOpen ? "-" : "+"}</span>
+                  </div>
+                  {categoryOpen && (
+                    <ul className="sub-menu">
+                      <li>
+                        <Link href="/product/stainless-steel" onClick={closeMenu}>
+                          Product 1 (Stainless Steel)
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/product/edge-condition" onClick={closeMenu}>
+                          Product 2 (Edge Condition)
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/product/tolerances" onClick={closeMenu}>
+                          Product 3 (Tolerances)
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/product/hardness-ranges" onClick={closeMenu}>
+                          Product 4 (Hardness Ranges)
+                        </Link>
+                      </li>
+                    </ul>
+                  )}
                 </li>
               </ul>
             )}
@@ -101,7 +121,7 @@ export default function MobileMenu({
             {corporateOpen && (
               <ul className="sub-menu">
                 <li>
-                  <Link href="/csr">CSR</Link>
+                  <Link href="/csr" onClick={closeMenu}>CSR</Link>
                 </li>
               </ul>
             )}
@@ -120,7 +140,7 @@ export default function MobileMenu({
             {infraOpen && (
               <ul className="sub-menu">
                 <li>
-                  <Link href="/infrastructure">
+                  <Link href="/infrastructure" onClick={closeMenu}>
                     Cold Rolled Precision Stainless Steel Strips
                   </Link>
                 </li>
@@ -129,7 +149,7 @@ export default function MobileMenu({
           </li>
 
           <li>
-            <Link href="/blogs">Blogs</Link>
+            <Link href="/blogs" onClick={closeMenu}>Blogs</Link>
           </li>
         </ul>
 

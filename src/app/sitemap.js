@@ -2,7 +2,7 @@ export default function sitemap() {
   const baseUrl = 'https://www.jindalmetals.com';
   
   // Static paths in the project
-  const routes = ['', '/about', '/product', '/csr', '/infrastructure', '/blogs'].map((route) => ({
+  const routes = ['', '/about', '/category', '/product', '/csr', '/infrastructure', '/blogs'].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
     changeFrequency: route === '' ? 'daily' : 'monthly',

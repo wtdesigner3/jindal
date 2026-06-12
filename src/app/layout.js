@@ -1,4 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 import Header from "src/components/layout/Header";
 import Footer from "src/components/layout/Footer";
@@ -10,8 +11,12 @@ import 'boxicons/css/boxicons.min.css';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import '@fancyapps/ui/dist/fancybox/fancybox.css';
-import "../css/style.css" 
-
+import "../css/style.css"
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-poppins",
+});
 export const metadata = {
   metadataBase: new URL('https://www.jindalmetals.com'),
   title: {
@@ -38,15 +43,15 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`h-full antialiased`}
+      className={`h-full antialiased ${poppins.className}`}
     >
       <body className="min-h-full flex flex-col">
-        
-        <Header/>
-        {children}
-        <Footer/>
 
-        </body>
+        <Header />
+        {children}
+        <Footer />
+
+      </body>
     </html>
   );
 }
