@@ -13,28 +13,28 @@ const blogData = [
         date: "10 August, 2025",
         category: "Industry",
         title: "Revolutionizing Production Then Future of Factories.",
-        link: "/blogs/revolutionizing-production",
+        link: "#",
     },
     {
         image: "/images/slide2.jpg",
         date: "12 August, 2025",
         category: "Architecture",
         title: "Factory Spotlight Technology Efficiency in Manufacturing.",
-        link: "/blogs/factory-spotlight",
+        link: "#",
     },
     {
         image: "/images/slide3.jpg",
         date: "10 May, 2025",
         category: "Renovation",
         title: "Pulse of Manufacturing Factories News & Advances.",
-        link: "/blogs/pulse-of-manufacturing",
+        link: "#",
     },
     {
         image: "/images/slide2.jpg",
         date: "15 August, 2025",
         category: "Industry",
         title: "Technological Efficiency in the Factory.",
-        link: "/blogs/technology-factory",
+        link: "#",
     },
 ];
 
