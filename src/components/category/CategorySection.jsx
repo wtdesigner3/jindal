@@ -8,7 +8,7 @@ import ProductCard from "src/ui/ProductCard";
 const products = [
     {
         id: 1,
-        image: "/images/p-1.jpg",
+        image: "/images/thin.jpeg",
         tag: "Steel",
         title: "Stainless Steel",
         cta: "View grades & tolerances",
@@ -16,7 +16,7 @@ const products = [
     },
     {
         id: 2,
-        image: "/images/innerpages/blog-st-img2.jpg",
+        image: "/images/rollsub2.png",
         tag: "Steel",
         title: "Edge Condition",
         cta: "View grades & tolerances",
@@ -24,7 +24,7 @@ const products = [
     },
     {
         id: 3,
-        image: "/images/innerpages/blog-st-img3.jpg",
+        image: "/images/about.jpeg",
         tag: "Steel",
         title: "Tolerances",
         cta: "View grades & tolerances",
@@ -32,22 +32,14 @@ const products = [
     },
     {
         id: 4,
-        image: "/images/innerpages/blog-st-img4.jpg",
+        image: "/images/stain.jpg",
         tag: "Steel",
         title: "Hardness Ranges",
         cta: "View grades & tolerances",
         slug: "/stainless-steel/hardness-ranges",
     },
-    {
-        id: 5,
-        image: "/images/innerpages/blog-st-img4.jpg",
-        tag: "Steel",
-        title: "Hardness Ranges",
-        cta: "View grades & tolerances",
-        slug: "/stainless-steel/hardness-ranges",
-    },
-];
 
+];
 
 export default function CategorySection() {
     return (
