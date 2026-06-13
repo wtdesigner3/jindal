@@ -12,7 +12,7 @@ const products = [
 
     category: "Stainless Steel",
 
-    image: "/images/products/cold-rolled-precision-stainless-steel-strips.webp",
+    image: "/images/thin.jpeg",
 
     description:
       "Jindal Metal Industries manufactures high-quality cold rolled precision stainless steel strips for automotive, industrial, engineering, electronics and precision component applications.",
@@ -41,7 +41,7 @@ const products = [
 
     category: "Stainless Steel",
 
-    image: "/images/products/stainless-steel-ultra-thin-foils.webp",
+    image: "/images/thin.jpeg",
 
     description:
       "Ultra-thin stainless steel foils manufactured for electronics, batteries, medical devices and precision engineering applications.",
@@ -70,7 +70,7 @@ const products = [
 
     category: "High Carbon & Alloy Steel Strips",
 
-    image: "/images/products/hardened-and-tempered-steel-strips.webp",
+    image: "/images/rollsub1.jpeg",
 
     description:
       "High-strength hardened and tempered steel strips for springs, tools, automotive and industrial applications.",
@@ -99,7 +99,7 @@ const products = [
 
     category: "High Carbon & Alloy Steel Strips",
 
-    image: "/images/products/cold-rolled-steel-strips.webp",
+    image: "/images/rollsub2.png",
 
     description:
       "Cold rolled steel strips with excellent dimensional accuracy, surface finish and formability.",
@@ -203,33 +203,6 @@ const products = [
     },
   },
 
-  {
-    id: 8,
-    slug: "hardness-ranges",
-
-    title: "Hardness Ranges",
-
-    category: "Technical Information",
-
-    image: "/images/products/hardness-ranges.webp",
-
-    description:
-      "Reference guide for hardness ranges, temper conditions and mechanical properties.",
-
-    content: `
-      <p>
-        Available in annealed, quarter hard, half hard, full hard and custom tempers.
-      </p>
-    `,
-
-    seo: {
-      title: "",
-      description: "",
-      keywords: [],
-      ogImage: "",
-      canonical: "",
-    },
-  },
 ];
 export async function generateMetadata({ params }) {
   const { slug } = await params;
@@ -264,7 +237,7 @@ export default async function ProductDetailPage({ params }) {
     <>
       <PageHeader
         title={product.title}
-        bgImage="/images/slide1.jpg"
+        bgImage={product.image}
         breadcrumb={[
           { name: "Home", href: "/" },
           { name: product.title },

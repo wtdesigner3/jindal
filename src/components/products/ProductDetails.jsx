@@ -13,10 +13,10 @@ export default function ProductDetails({ product, relatedProducts = [], category
                             <h1 className="h-tags position-relative px-3 mb-4">{product.title}</h1>
                             <div className="position-relative" style={{ height: "350px" }}>
                                 <Image
-                                    src="/images/slide1.jpg"
+                                    src={product.image}
                                     alt={product.title}
                                     fill
-                                    className="object-fit-cover"
+                                    className="object-fit-cover rounded"
                                     sizes="100vw"
                                 />
                             </div>

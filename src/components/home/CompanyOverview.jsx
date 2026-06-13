@@ -6,7 +6,7 @@ export default function CompanyOverview() {
     <section className="home3-company-info-section section my-0">
       <div className="container">
         <div className="row gy-md-5 gy-4 align-items-center">
-          
+
           {/* Left Image */}
           <div
             className="col-lg-6 wow animate ss ss2 fadeInLeft position-relative"
@@ -15,13 +15,20 @@ export default function CompanyOverview() {
           >
             <div className="company-info-img-and-countdown-area p-5 z-2">
               <div className="info-img magnetic-item">
-                <Image
-                  src="/images/newabout.jpg"
-                  alt="Company Overview"
-                  width={700}
-                  height={500}
-                  className="img-fluid"
-                />
+                <div
+                  className="position-relative"
+                  style={{
+                    width: "100%",
+                    aspectRatio: "4 / 4",
+                  }}
+                >
+                  <Image
+                    src="/images/about.jpeg"
+                    alt="about"
+                    fill
+                    className="object-fit-cover img-fluid"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -43,12 +50,12 @@ export default function CompanyOverview() {
                   Jindal Metals &amp; Alloys Ltd began operations over more than
                   four decades ago and has an enviable track record of
                   stability, trust and growth in the industry.
-                
+
                   Jindal innovates to produce thin & Ultra-thin Precision Stainless Steel Strips with the Perfect balance of Quality, turning ideas into new processes through Partnering customers in Product development with the Philosophy of Engineering Satisfaction which offers technically & economically adapted and viable Niche Product for highly Niche Market.
                 </p>
 
 
-              
+
 
                 <Link href="/about" className="primary-btn2 two mx-3">
                   <span>Know More</span>

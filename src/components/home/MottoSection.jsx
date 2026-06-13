@@ -15,7 +15,7 @@ export default function MottoSection() {
     <div className="home2-video-banner-section section my-0 py-0">
       <div className="banner-wrapper">
         <Image
-          src="/images/home2/home2-video-banner-bg.jpg"
+          src="/images/motto.jpg"
           alt="Our Motto"
           width={1920}
           height={800}

@@ -18,33 +18,7 @@ export const menuData = [
     title: "Our Products",
     slug: "#",
     children: [
-      {
-        id: 23,
-        title: "Technical Information",
-        slug: "/technical-information",
-        children: [
-          {
-            id: 231,
-            title: "Grades & Its Properties",
-            slug: "/technical-information/grades-properties",
-          },
-          {
-            id: 232,
-            title: "Edge Condition",
-            slug: "/technical-information/edge-condition",
-          },
-          {
-            id: 233,
-            title: "Tolerances",
-            slug: "/technical-information/tolerances",
-          },
-          {
-            id: 234,
-            title: "Hardness Ranges",
-            slug: "/technical-information/hardness-ranges",
-          },
-        ],
-      },
+
       {
         id: 21,
         title: "Stainless Steel",
@@ -80,6 +54,33 @@ export const menuData = [
           },
         ],
       },
+      //  {
+      //   id: 23,
+      //   title: "Technical Information",
+      //   slug: "/technical-information",
+      //   children: [
+      //     {
+      //       id: 231,
+      //       title: "Grades & Its Properties",
+      //       slug: "/technical-information/grades-properties",
+      //     },
+      //     {
+      //       id: 232,
+      //       title: "Edge Condition",
+      //       slug: "/technical-information/edge-condition",
+      //     },
+      //     {
+      //       id: 233,
+      //       title: "Tolerances",
+      //       slug: "/technical-information/tolerances",
+      //     },
+      //     {
+      //       id: 234,
+      //       title: "Hardness Ranges",
+      //       slug: "/technical-information/hardness-ranges",
+      //     },
+      //   ],
+      // },
 
 
     ],

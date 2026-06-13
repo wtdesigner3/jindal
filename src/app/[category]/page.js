@@ -9,7 +9,7 @@ const categories = [
         id: 1,
         slug: "stainless-steel",
         title: "Stainless Steel",
-        image: "/images/slide1.jpg",
+        image: "/images/slide2.jpg",
 
         description:
             "Explore our complete range of precision stainless steel strips and ultra-thin foils manufactured to international quality standards.",
@@ -33,7 +33,7 @@ const categories = [
         id: 2,
         slug: "high-carbon-alloy-steel-strips",
         title: "High Carbon & Alloy Steel Strips",
-        image: "/images/slide1.jpg",
+        image: "/images/roll1.jpeg",
 
         description:
             "High-performance cold rolled, hardened and tempered steel strips for demanding industrial applications.",
@@ -134,7 +134,7 @@ export async function generateMetadata({ params }) {
 
 export default async function CategoryPage({ params }) {
     const { category: categorySlug } = await params;
-    
+
     const category = categories.find(
         (item) => item.slug === categorySlug
     );
