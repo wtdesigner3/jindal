@@ -46,7 +46,7 @@ export default function Footer() {
         <div className="container">
           <div className="footer-menu-and-address-wrap">
             <div className="row align-items-center">
-              
+
               {/* Logo & About */}
               <div className="col-lg-3">
                 <div className="footer-widget text-light">
@@ -115,25 +115,25 @@ export default function Footer() {
 
                         <ul className="contact-area">
                           <li>
-                            <span>CALL ANY TIME</span>
+                            <span className="text-light">CALL ANY TIME</span>
                             <h6>
-                              <a href="tel:+919876543210">
+                              <a href="tel:+919876543210" className="text-light">
                                 +91 98765 43210
                               </a>
                             </h6>
                           </li>
 
                           <li>
-                            <span>ADDRESS</span>
-                            <h6>
+                            <span className="text-light">ADDRESS</span>
+                            <h6 className="text-light">
                               New Delhi, India
                             </h6>
                           </li>
 
                           <li>
-                            <span>SAY HELLO</span>
+                            <span className="text-light">SAY HELLO</span>
                             <h6>
-                              <a href="mailto:info@jindalmetals.com">
+                              <a href="mailto:info@jindalmetals.com" className="text-light">
                                 info@jindalmetals.com
                               </a>
                             </h6>

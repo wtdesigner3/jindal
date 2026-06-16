@@ -40,7 +40,7 @@ export default function CompanyOverview() {
             data-wow-duration="1500ms"
           >
             <div className="company-info-content about-line position-relative py-5 px-4 z-2">
-              <div className="bg-light z-2 p-first position-relative">
+              <div className=" z-2 p-first position-relative" style={{ backgroundColor: "#ffffff" }}>
                 <h2>Company Overview</h2>
 
                 <p>
@@ -57,7 +57,7 @@ export default function CompanyOverview() {
 
 
 
-                <Link href="/about" className="primary-btn2 two mx-3">
+                <Link href="/about" className="primary-btn2 two mx-3" style={{ backgroundColor: "#ffffff" }}>
                   <span>Know More</span>
 
                   <svg
