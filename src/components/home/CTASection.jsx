@@ -6,14 +6,12 @@ export default function CTASection() {
       <div className="container">
         <div className="footer-top-banner-wrap">
           <div className="section-title white">
-            <span>Building Your Vision</span>
+            <span>Creating Sustainable Value Through Innovation</span>
 
-            <h2>{"Let's Build Dream Something Amazing."}</h2>
+            <h2>Looking for Precision Steel Solutions?</h2>
 
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
-              reprehenderit voluptas quasi dolor possimus adipisci quaerat
-              soluta ipsa expedita unde.
+              Partner with a trusted manufacturer of precision stainless steel strips, foils, and alloy steel products.
             </p>
           </div>
 
@@ -22,8 +20,8 @@ export default function CTASection() {
               href="/services"
               className="primary-btn1 white-bg"
             >
-              <span>Start Journey</span>
-              <span>Start Journey</span>
+              <span>Get a Quote</span>
+              <span>Get a Quote</span>
 
               <svg
                 className="arrow"
@@ -43,7 +41,7 @@ export default function CTASection() {
               href="/about"
               className="discuss-btn"
             >
-              Know More
+              Contact Our Experts
 
               <svg
                 width="9"

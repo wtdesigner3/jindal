@@ -25,12 +25,7 @@ export default function MottoSection() {
           <h1>Our Motto</h1>
 
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem eos
-            nostrum enim cumque quam, pariatur earum voluptates maxime, rem et
-            omnis excepturi ratione. Sequi pariatur quae molestias
-            necessitatibus aliquam sed vel. Vel eveniet odio necessitatibus
-            aliquam, possimus ipsa, quia quaerat nemo dignissimos, labore
-            beatae quos earum voluptates iusto ad fuga.
+            We are committed to creating sustainable value for our customers, employees, business partners, and stakeholders through continuous innovation, operational excellence, and responsible manufacturing practices. By delivering high-quality precision stainless steel and alloy steel solutions, we help industries improve performance, efficiency, and reliability in an increasingly competitive global marketplace.
           </p>
         </div>
 
@@ -38,7 +33,7 @@ export default function MottoSection() {
           <div className="container-fluid">
             <div className="logo-wrap">
               <div className="logo-title">
-                <h6>Our Certification</h6>
+                <h6 className="fs-4">Our Certification</h6>
               </div>
 
               <div className="marquee">

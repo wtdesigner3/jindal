@@ -9,28 +9,28 @@ import "swiper/css/navigation";
 
 const testimonialData = [
     {
-        heading: "Excellent quality production!",
+        heading: "Precision You Can Depend On",
         description:
-            "Feel free customize key feature based on the services & strategy you offer each plan. This breakdown helps potential clients understand your strengths.",
+            "The consistency and quality of Jindal Metals' stainless steel products have played a key role in maintaining our manufacturing standards. Their attention to detail and commitment to excellence set them apart.",
         image: "/images/slide1.jpg",
-        name: "Mr. Daniel Scoot",
-        designation: "Founder, Egenslab",
+        name: "Senior Procurement Manager",
+        designation: "Engineering Solutions Company",
     },
     {
-        heading: "Highly professional team!",
+        heading: "A Partner Built on Trust",
         description:
-            "Outstanding support and product quality. The project was delivered on time and exceeded our expectations.",
+            "From product development to final delivery, the Jindal Metals team demonstrates professionalism, technical expertise, and exceptional customer support. They are a trusted extension of our supply chain.",
         image: "/images/slide2.jpg",
-        name: "John Smith",
-        designation: "Managing Director",
+        name: "Head of Operations",
+        designation: "Automotive Manufacturing Sector",
     },
     {
-        heading: "Great manufacturing partner!",
+        heading: "Consistent Quality, Every Time",
         description:
-            "Reliable production process with excellent customer service and communication throughout the project.",
+            "Jindal Metals continues to exceed expectations with reliable delivery schedules, superior product quality, and a customer-first approach. Their materials consistently meet our most demanding specifications.",
         image: "/images/slide3.jpg",
-        name: "Michael Johnson",
-        designation: "CEO",
+        name: "Technical Director",
+        designation: "Industrial Equipment Manufacturer",
     },
 ];
 
@@ -48,9 +48,7 @@ export default function TestimonialSection() {
                                 <h2 className="text-light py-3">Trusted by Our Partners.</h2>
 
                                 <p className="text-light pt-0">
-                                    Sed nisl eros, condimentum nec risus sit amet, finibus
-                                    congue. Fusce fringilla est libero, sed tempus urna feugiat
-                                    eu.
+                                    Building long-term partnerships through quality products, technical expertise, and customer-focused solutions.
                                 </p>
                             </div>
                         </div>

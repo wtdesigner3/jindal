@@ -36614,7 +36614,7 @@ header.style-4 .mobile-logo-area .menu-close-btn:hover i {
 }
 
 .theme-btn-s2:hover {
-  background: #ff6f61;
+  background: var(--primary-color1);
   color: #fff;
 }
 
@@ -36628,7 +36628,7 @@ header.style-4 .mobile-logo-area .menu-close-btn:hover i {
 }
 
 .swiper-pagination-bullet-active {
-  background: #ff6f61;
+  background: var(--primary-color1);
 }
 
 @media(max-width:991px) {

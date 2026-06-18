@@ -30,19 +30,17 @@ export default function ContactSection() {
       <div className="container">
         <div className="contact-wrapper">
           <div className="row gy-5 align-items-center">
-            
+
             {/* Left Content */}
             <div className="col-lg-6">
               <div className="contact-content">
                 <div className="section-title two">
                   <span>Get In Touch</span>
 
-                  <h2 className="mb-1">Connected With Us</h2>
+                  <h2 className="mb-1">Contact Us</h2>
 
                   <p className="mb-4">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Rerum velit amet sunt nisi? Exercitationem possimus et
-                    architecto? Nemo, architecto repellendus.
+                    Looking for reliable metal solutions? Our experts are ready to assist you with product information, technical guidance, and customized requirements.
                   </p>
 
                   <iframe

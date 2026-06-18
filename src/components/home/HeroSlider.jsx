@@ -13,28 +13,30 @@ import "./HeroSlider.css";
 
 const slides = [
   {
-    image: "/images/slide3.jpg",
-    title: "Committed to ESG Excellence",
-    subtitle: "Committed to ESG Excellence",
-    button: "Start Your Project",
-    link: "/about",
+    image: "/images/slide1.jpg",
+    title: "India's Leading Precision Stainless Steel Manufacturer",
+    subtitle:
+      "Delivering world-class stainless steel strips, foils, and alloy steel solutions engineered for performance, precision, and reliability.",
+    button: "Request a Quote",
+    link: "/contact",
   },
   {
     image: "/images/slide2.jpg",
-    title: "Precision Stainless Steel Manufacturer",
-    subtitle: "Precision Stainless Steel Manufacturer",
-    button: "View Our Work",
-    link: "/product",
+    title: "Precision Engineered for Critical Industries",
+    subtitle:
+      "Trusted by automotive, engineering, electrical, and industrial manufacturers for consistent quality and superior performance.",
+    button: "Explore Products",
+    link: "/products",
   },
   {
-    image: "/images/slide1.jpg",
-    title: "Precision Stainless Steel, Perfected.",
-    subtitle: "From identity to launch — we’re your partner in every step of the journey.",
-    button: "Book a Free Call",
-    link: "/about",
+    image: "/images/slide3.jpg",
+    title: "Driving Sustainable Manufacturing Excellence",
+    subtitle:
+      "Committed to innovation, responsible manufacturing, and creating long-term value for customers, partners, and communities.",
+    button: "Contact Us",
+    link: "/contact",
   },
 ];
-
 export default function HeroSlider() {
   return (
     <section className="hero-slider hero-style">
@@ -65,16 +67,16 @@ export default function HeroSlider() {
                 style={{ objectFit: "cover", zIndex: -1 }}
               />
               <div className="slide-overlay"></div>
-          
+
               <div className="h-container">
                 <div className="slide-title">
                   <h2>{slide.title}</h2>
                 </div>
-          
+
                 <div className="slide-text">
-                  <p>{slide.subtitle}</p>
+                  <p className="fs-5">{slide.subtitle}</p>
                 </div>
-          
+
                 <div className="slide-btns">
                   <Link href={slide.link} className="theme-btn-s2">
                     {slide.button}
