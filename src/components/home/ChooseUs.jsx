@@ -4,23 +4,23 @@ const features = [
   {
     id: 1,
     image: "/images/qc.png",
-    title: "Quality Control Systems",
+    title: "Precision Quality Assurance",
     description:
-      "Stringent quality checks and advanced testing ensure consistent performance, precision, and reliability in every product.",
+      "Our comprehensive quality management system ensures every strip and foil meets stringent industry specifications for consistency, durability, and performance.",
   },
   {
     id: 2,
     image: "/images/scale.png",
-    title: "Scalability and Flexibility",
+    title: "Technical Expertise & Innovation",
     description:
-      "Modern manufacturing capabilities enable us to efficiently meet diverse customer requirements, from small batches to large-scale production.",
+      "Decades of metallurgical experience combined with advanced manufacturing technologies enable us to deliver innovative solutions for critical applications.",
   },
   {
     id: 3,
     image: "/images/sus.png",
-    title: "Sustainable Operation & Safety",
+    title: "Trusted Industry Partner",
     description:
-      "Committed to environmentally responsible practices and a safety-first culture that supports sustainable growth and operational excellence.",
+      "We are committed to reliability, timely delivery, and sustainable manufacturing practices that create lasting value for customers across global industries.",
   },
 ];
 
