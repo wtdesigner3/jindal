@@ -1,30 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import MultiStepContactForm from "src/components/forms/MultiStepContactForm";
 
 export default function ContactSection() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    subject: "",
-    message: "",
-  });
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(formData);
-
-    // API Call Here
-  };
-
   return (
     <section className=" two section my-0" id="scroll-section">
       <div className="container">
@@ -59,83 +37,7 @@ export default function ContactSection() {
 
             {/* Right Form */}
             <div className="col-lg-6">
-              <div className="contact-form-wrap two">
-                <form onSubmit={handleSubmit}>
-                  <div className="row g-4">
-
-                    <div className="col-md-12">
-                      <div className="form-inner">
-                        <label>Full Name *</label>
-                        <input
-                          type="text"
-                          name="name"
-                          value={formData.name}
-                          onChange={handleChange}
-                          required
-                        />
-                      </div>
-                    </div>
-
-                    <div className="col-md-6">
-                      <div className="form-inner">
-                        <label>Email *</label>
-                        <input
-                          type="email"
-                          name="email"
-                          value={formData.email}
-                          onChange={handleChange}
-                          required
-                        />
-                      </div>
-                    </div>
-
-                    <div className="col-md-6">
-                      <div className="form-inner">
-                        <label>Phone *</label>
-                        <input
-                          type="text"
-                          name="phone"
-                          value={formData.phone}
-                          onChange={handleChange}
-                          required
-                        />
-                      </div>
-                    </div>
-
-                    <div className="col-md-12">
-                      <div className="form-inner">
-                        <label>Subject</label>
-                        <input
-                          type="text"
-                          name="subject"
-                          value={formData.subject}
-                          onChange={handleChange}
-                        />
-                      </div>
-                    </div>
-
-                    <div className="col-md-12">
-                      <div className="form-inner">
-                        <label>Message *</label>
-                        <textarea
-                          rows="5"
-                          name="message"
-                          value={formData.message}
-                          onChange={handleChange}
-                          required
-                        />
-                      </div>
-                    </div>
-                  </div>
-
-                  <button
-                    type="submit"
-                    className="primary-btn4 btn-hover black-bg mt-4"
-                  >
-                    Submit Now
-                  </button>
-                </form>
-              </div>
+              <MultiStepContactForm />
             </div>
 
           </div>

@@ -175,6 +175,7 @@ export const menuData = [
     children: [],
   },
 ];
+
 export default function Header() {
   const [mobileMenu, setMobileMenu] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
