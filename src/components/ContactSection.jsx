@@ -4,21 +4,22 @@ import MultiStepContactForm from "src/components/forms/MultiStepContactForm";
 
 export default function ContactSection() {
   return (
-    <section className=" two section my-0" id="scroll-section">
+    <section className=" two section my-0 crop-bg" id="scroll-section">
       <div className="container">
         <div className="contact-wrapper">
           <div className="row gy-5 align-items-center">
-
             {/* Left Content */}
             <div className="col-lg-6">
-              <div className="contact-content">
+              <div className="contact-content z-1 position-relative">
                 <div className="section-title two">
                   <span>Get In Touch</span>
 
                   <h2 className="mb-1">Contact Us</h2>
 
                   <p className="mb-4">
-                    Looking for reliable metal solutions? Our experts are ready to assist you with product information, technical guidance, and customized requirements.
+                    Looking for reliable metal solutions? Our experts are ready
+                    to assist you with product information, technical guidance,
+                    and customized requirements.
                   </p>
 
                   <iframe
@@ -39,7 +40,6 @@ export default function ContactSection() {
             <div className="col-lg-6">
               <MultiStepContactForm />
             </div>
-
           </div>
         </div>
       </div>
