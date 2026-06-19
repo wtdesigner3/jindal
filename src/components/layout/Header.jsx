@@ -17,7 +17,23 @@ export const menuData = [
     id: 2,
     title: "About Us",
     slug: "#",
-    children: [],
+    children: [
+      {
+        id: 334341,
+        title: "Corporate Overview",
+        slug: "/aboutus/corporate-overview",
+      },
+      {
+        id: 334342,
+        title: "Holding Group Company",
+        slug: "/aboutus/holding-group-company",
+      },
+      {
+        id: 334343,
+        title: "Vision & Mission",
+        slug: "/aboutus/vision-mission",
+      },
+    ],
   },
 
   {
@@ -69,8 +85,18 @@ export const menuData = [
     children: [
       {
         id: 334341,
-        title: "CSR",
-        slug: "/csr",
+        title: "Corporate Overview",
+        slug: "/corporate-information/corporate-overview",
+      },
+      {
+        id: 334342,
+        title: "Holding Group Company",
+        slug: "/corporate-information/holding-group-company",
+      },
+      {
+        id: 334343,
+        title: "Vision & Mission",
+        slug: "/corporate-information/vision-mission",
       },
     ],
   },
@@ -81,18 +107,18 @@ export const menuData = [
     children: [
       {
         id: 3771,
-        title: "Quality Policy",
-        slug: "/quality/quality-policy",
+        title: "QEHS Policy",
+        slug: "/quality/qehs-policy",
       },
       {
         id: 3551,
-        title: "Quality Objectives",
-        slug: "/quality",
+        title: "Our Certifications",
+        slug: "/quality/certifications",
       },
       {
         id: 3451,
-        title: "Certifications",
-        slug: "/quality",
+        title: "R&D Equipment / Facilities",
+        slug: "/quality/rd-equipment",
       },
     ],
   },
@@ -103,18 +129,18 @@ export const menuData = [
     children: [
       {
         id: 321,
-        title: "Human Resource Policy",
-        slug: "/human-resource/human-resource-policy",
+        title: "Career",
+        slug: "/human-resource/career",
       },
       {
         id: 331,
-        title: "Human Resource Objectives",
-        slug: "/human-resource/human-resource-objectives",
+        title: "Employee Welfare",
+        slug: "/human-resource/employee-welfare",
       },
       {
         id: 314,
-        title: "Certifications",
-        slug: "/human-resource/certifications",
+        title: "Training Programs",
+        slug: "/human-resource/training-programs",
       },
     ],
   },
@@ -126,8 +152,18 @@ export const menuData = [
     children: [
       {
         id: 41,
-        title: "Cold Rolled Precision Stainless Steel Strips",
-        slug: "/infrastructure",
+        title: "Manufacturing Facilities",
+        slug: "/infrastructure/manufacturing-facilities",
+      },
+      {
+        id: 42,
+        title: "Testing Lab",
+        slug: "/infrastructure/testing-lab",
+      },
+      {
+        id: 43,
+        title: "Plant Information",
+        slug: "/infrastructure/plant-information",
       },
     ],
   },
@@ -151,9 +187,9 @@ export default function Header() {
         setHeaderHeight(headerRef.current.offsetHeight);
       }
     };
-    
+
     updateHeight();
-    
+
     const handleScroll = () => {
       if (window.scrollY > 150) {
         setIsSticky(true);
@@ -161,13 +197,13 @@ export default function Header() {
         setIsSticky(false);
       }
     };
-    
+
     window.addEventListener("scroll", handleScroll);
     window.addEventListener("resize", updateHeight);
-    
+
     // Also update height after a small delay to ensure layout is fully rendered
     const timer = setTimeout(updateHeight, 1000);
-    
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("resize", updateHeight);
@@ -177,129 +213,131 @@ export default function Header() {
 
   return (
     <>
-      <div 
-        className="header-placeholder" 
+      <div
+        className="header-placeholder"
         style={{ height: isSticky ? `${headerHeight}px` : "auto" }}
       />
-      <div 
-        ref={headerRef} 
+      <div
+        ref={headerRef}
         className={`main-header-wrapper ${isSticky ? "is-sticky" : ""}`}
+        style={{ viewTransitionName: "site-header" }}
       >
         <TopHeader />
-        <header className="header-area style-1">
-        <div className="container-fluid d-flex flex-nowrap align-items-center justify-content-between justify-content-lg-center">
-          {/* Logo */}
-          <div className="company-logo d-lg-none">
-            <Link href="/">
-              <Image
-                src="/images/logo.png"
-                alt="Logo"
-                width={180}
-                height={60}
-              />
-            </Link>
-          </div>
 
-          {/* Desktop Menu */}
-          <nav className="main-menu d-none d-lg-block">
-            <ul className="menu-list d-flex gap-3">
-              {menuData.map((item) => (
-                <li
-                  key={item.id}
-                  className={
-                    item.children?.length ? "menu-item-has-children" : ""
-                  }
-                >
-                  <Link
-                    href={item.slug}
-                    className={item.children?.length ? "drop-down" : ""}
+        <header className="header-area style-1">
+          <div className="container-fluid d-flex flex-nowrap align-items-center justify-content-between justify-content-lg-center">
+            {/* Logo */}
+            <div className="company-logo d-lg-none">
+              <Link href="/">
+                <Image
+                  src="/images/logo.png"
+                  alt="Logo"
+                  width={180}
+                  height={60}
+                />
+              </Link>
+            </div>
+
+            {/* Desktop Menu */}
+            <nav className="main-menu d-none d-lg-block">
+              <ul className="menu-list d-flex gap-3">
+                {menuData.map((item) => (
+                  <li
+                    key={item.id}
+                    className={
+                      item.children?.length ? "menu-item-has-children" : ""
+                    }
                   >
-                    {item.title}
+                    <Link
+                      href={item.slug}
+                      className={item.children?.length ? "drop-down" : ""}
+                    >
+                      {item.title}
+
+                      {item.children?.length > 0 && (
+                        <svg
+                          width="10"
+                          height="10"
+                          viewBox="0 0 10 10"
+                          xmlns="http://www.w3.org/2000/svg"
+                          style={{ marginLeft: "6px" }}
+                        >
+                          <path d="M10 0.0495054L10 10.0001L8.13725 10.0001L-8.22301e-08 1.8812L1.86275 -3.55691e-07L7.35294 5.5446L7.30392 0.0495053L10 0.0495054Z" />
+                          <path d="M-9.6438e-05 10.0002L6.27441 10.0002L3.62736 7.32687L-9.63211e-05 7.32687L-9.6438e-05 10.0002Z" />
+                        </svg>
+                      )}
+                    </Link>
 
                     {item.children?.length > 0 && (
-                      <svg
-                        width="10"
-                        height="10"
-                        viewBox="0 0 10 10"
-                        xmlns="http://www.w3.org/2000/svg"
-                        style={{ marginLeft: "6px" }}
-                      >
-                        <path d="M10 0.0495054L10 10.0001L8.13725 10.0001L-8.22301e-08 1.8812L1.86275 -3.55691e-07L7.35294 5.5446L7.30392 0.0495053L10 0.0495054Z" />
-                        <path d="M-9.6438e-05 10.0002L6.27441 10.0002L3.62736 7.32687L-9.63211e-05 7.32687L-9.6438e-05 10.0002Z" />
-                      </svg>
+                      <>
+                        <i className="bi bi-plus dropdown-icon"></i>
+
+                        <ul className="sub-menu">
+                          {item.children.map((child) => (
+                            <li
+                              key={child.id}
+                              className={
+                                child.children?.length
+                                  ? "menu-item-has-children"
+                                  : ""
+                              }
+                            >
+                              <Link href={child.slug}>
+                                <span>
+                                  {child.title}
+
+                                  {child.children?.length > 0 && (
+                                    <svg
+                                      width="10"
+                                      height="10"
+                                      viewBox="0 0 10 10"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      style={{ marginLeft: "6px" }}
+                                    >
+                                      <path d="M0.0495054 0H10.0001V1.86275L1.88121 10L0 8.13726L5.54461 2.64706L0.0495054 2.69608V0Z" />
+                                      <path d="M9.99971 9.99993V3.72542L7.32642 6.37248V9.99993H9.99971Z" />
+                                    </svg>
+                                  )}
+                                </span>
+                              </Link>
+
+                              {child.children?.length > 0 && (
+                                <>
+                                  <i className="d-lg-none d-flex bi bi-plus dropdown-icon"></i>
+
+                                  <ul className="sub-menu">
+                                    {child.children.map((subChild) => (
+                                      <li key={subChild.id}>
+                                        <Link href={subChild.slug}>
+                                          <span>{subChild.title}</span>
+                                        </Link>
+                                      </li>
+                                    ))}
+                                  </ul>
+                                </>
+                              )}
+                            </li>
+                          ))}
+                        </ul>
+                      </>
                     )}
-                  </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
 
-                  {item.children?.length > 0 && (
-                    <>
-                      <i className="bi bi-plus dropdown-icon"></i>
-
-                      <ul className="sub-menu">
-                        {item.children.map((child) => (
-                          <li
-                            key={child.id}
-                            className={
-                              child.children?.length
-                                ? "menu-item-has-children"
-                                : ""
-                            }
-                          >
-                            <Link href={child.slug}>
-                              <span>
-                                {child.title}
-
-                                {child.children?.length > 0 && (
-                                  <svg
-                                    width="10"
-                                    height="10"
-                                    viewBox="0 0 10 10"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    style={{ marginLeft: "6px" }}
-                                  >
-                                    <path d="M0.0495054 0H10.0001V1.86275L1.88121 10L0 8.13726L5.54461 2.64706L0.0495054 2.69608V0Z" />
-                                    <path d="M9.99971 9.99993V3.72542L7.32642 6.37248V9.99993H9.99971Z" />
-                                  </svg>
-                                )}
-                              </span>
-                            </Link>
-
-                            {child.children?.length > 0 && (
-                              <>
-                                <i className="d-lg-none d-flex bi bi-plus dropdown-icon"></i>
-
-                                <ul className="sub-menu">
-                                  {child.children.map((subChild) => (
-                                    <li key={subChild.id}>
-                                      <Link href={subChild.slug}>
-                                        <span>{subChild.title}</span>
-                                      </Link>
-                                    </li>
-                                  ))}
-                                </ul>
-                              </>
-                            )}
-                          </li>
-                        ))}
-                      </ul>
-                    </>
-                  )}
-                </li>
-              ))}
-            </ul>
-          </nav>
-
-          {/* Right Side */}
-          <div className="nav-right">
-            <button
-              className="mobile-menu-btn d-lg-none"
-              onClick={() => setMobileMenu(true)}
-            >
-              <Bars3Icon width={30} />
-            </button>
+            {/* Right Side */}
+            <div className="nav-right">
+              <button
+                className="mobile-menu-btn d-lg-none"
+                onClick={() => setMobileMenu(true)}
+              >
+                <Bars3Icon width={30} />
+              </button>
+            </div>
           </div>
-        </div>
-        <MobileMenu mobileMenu={mobileMenu} setMobileMenu={setMobileMenu} />
-      </header>
+          <MobileMenu mobileMenu={mobileMenu} setMobileMenu={setMobileMenu} />
+        </header>
       </div>
 
       {/* Mobile Menu Component */}

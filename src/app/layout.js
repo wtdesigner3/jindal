@@ -3,6 +3,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import Header from "src/components/layout/Header";
 import Footer from "src/components/layout/Footer";
+import NavigationProgress from "src/components/ui/NavigationProgress";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'animate.css';
 import 'swiper/css';
@@ -47,6 +48,7 @@ export default function RootLayout({ children }) {
     >
       <body className="min-h-full flex flex-col">
 
+        <NavigationProgress />
         <Header />
         {children}
         <Footer />
