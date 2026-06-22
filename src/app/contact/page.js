@@ -16,6 +16,7 @@ export default function ContactPage() {
     <>
       <PageHeader
         title="Contact Us"
+        bgImage="/images/slide2.jpg"
         breadcrumb={[
           { name: "Home", href: "/" },
           { name: "Contact Us" },
