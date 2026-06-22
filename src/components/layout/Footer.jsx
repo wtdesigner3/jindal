@@ -10,10 +10,10 @@ const companyLinks = [
 ];
 
 const careerLinks = [
+  { name: "Certifications", href: "/certifications" },
   { name: "Open Positions", href: "/human-resource/career" },
-  { name: "Students", href: "/career/students" },
-  { name: "Diversity & Inclusion", href: "/career/diversity" },
-  { name: "Factory Employ", href: "/career/factory" },
+  { name: "Stainless steel BROCHURE", href: "#" },
+  { name: "High Carbon & H & T BROCHURE", href: "#" },
 ];
 
 const socialLinks = [
@@ -91,7 +91,7 @@ export default function Footer() {
                     <div className="col-md-4">
                       <div className="footer-widget">
                         <div className="widget-title">
-                          <h5>CAREER</h5>
+                          <h5>QUICK LINKS</h5>
                         </div>
 
                         <ul className="widget-list">

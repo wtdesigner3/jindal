@@ -47,7 +47,7 @@ export default function TopHeader() {
 
             {/* Contact Button */}
             <Link href="/contact" className="top-btn contact-btn">
-              Contact Us
+              Stainless steel BROCHURE
             </Link>
           </div>
         </div>
