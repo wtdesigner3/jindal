@@ -3,14 +3,14 @@ import Image from "next/image";
 
 const companyLinks = [
   { name: "About Us", href: "/about" },
-  { name: "Meet Our Team", href: "/team" },
-  { name: "Our Project", href: "/projects" },
+  { name: "Contact Us", href: "/contact" },
+
   { name: "Blog & Article", href: "/blog" },
-  { name: "Solutions", href: "/solutions" },
+  { name: "Gallery", href: "/gallery" },
 ];
 
 const careerLinks = [
-  { name: "Open Positions", href: "/career" },
+  { name: "Open Positions", href: "/human-resource/career" },
   { name: "Students", href: "/career/students" },
   { name: "Diversity & Inclusion", href: "/career/diversity" },
   { name: "Factory Employ", href: "/career/factory" },
@@ -46,7 +46,6 @@ export default function Footer() {
         <div className="container">
           <div className="footer-menu-and-address-wrap">
             <div className="row align-items-center">
-
               {/* Logo & About */}
               <div className="col-lg-3">
                 <div className="footer-widget text-light">
@@ -71,7 +70,6 @@ export default function Footer() {
               <div className="col-lg-9">
                 <div className="footer-menu">
                   <div className="row gy-4">
-
                     {/* Company */}
                     <div className="col-md-4">
                       <div className="footer-widget">
@@ -117,7 +115,10 @@ export default function Footer() {
                           <li>
                             <span className="text-light">CALL ANY TIME</span>
                             <h6>
-                              <a href="tel:+919876543210" className="text-light">
+                              <a
+                                href="tel:+919876543210"
+                                className="text-light"
+                              >
                                 +91 98765 43210
                               </a>
                             </h6>
@@ -125,15 +126,16 @@ export default function Footer() {
 
                           <li>
                             <span className="text-light">ADDRESS</span>
-                            <h6 className="text-light">
-                              New Delhi, India
-                            </h6>
+                            <h6 className="text-light">New Delhi, India</h6>
                           </li>
 
                           <li>
                             <span className="text-light">SAY HELLO</span>
                             <h6>
-                              <a href="mailto:info@jindalmetals.com" className="text-light">
+                              <a
+                                href="mailto:info@jindalmetals.com"
+                                className="text-light"
+                              >
                                 info@jindalmetals.com
                               </a>
                             </h6>
@@ -141,11 +143,9 @@ export default function Footer() {
                         </ul>
                       </div>
                     </div>
-
                   </div>
                 </div>
               </div>
-
             </div>
           </div>
         </div>
@@ -155,11 +155,10 @@ export default function Footer() {
       <div className="footer-bottom-wrap">
         <div className="container">
           <div className="footer-bottom d-flex justify-content-between align-items-center flex-wrap">
-
             <div className="copyright-area">
               <p>
-                © {new Date().getFullYear()}{" "}
-                <Link href="/">Jindal Metals</Link>. All Rights Reserved.
+                © {new Date().getFullYear()} <Link href="/">Jindal Metals</Link>
+                . All Rights Reserved.
               </p>
             </div>
 
@@ -171,13 +170,11 @@ export default function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <i className={`bi ${social.icon}`}></i>{" "}
-                    {social.name}
+                    <i className={`bi ${social.icon}`}></i> {social.name}
                   </a>
                 </li>
               ))}
             </ul>
-
           </div>
         </div>
       </div>
