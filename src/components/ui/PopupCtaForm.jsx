@@ -3,16 +3,9 @@
 import React, { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
 
-/**
- * PopupCtaForm
- * 
- * A modern, premium popup form that triggers when the user clicks its button.
- * You can customize the button text and CSS class via props.
- * Uses createPortal to avoid z-index stacking context issues.
- */
-export default function PopupCtaForm({ 
-  buttonText = "Get a Quote", 
-  buttonClass = "primary-btn1" 
+export default function PopupCtaForm({
+  buttonText = "Get a Quote",
+  buttonClass = "primary-btn1",
 }) {
   const [isOpen, setIsOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
@@ -49,8 +42,8 @@ export default function PopupCtaForm({
 
   const modalContent = isOpen ? (
     <div className="popup-cta-overlay" onClick={toggleModal}>
-      <div 
-        className="popup-cta-content" 
+      <div
+        className="popup-cta-content"
         onClick={(e) => e.stopPropagation()} // Prevent clicking inside modal from closing it
       >
         <div className="popup-cta-header">
@@ -60,40 +53,78 @@ export default function PopupCtaForm({
               Fill out the form below and our team will get back to you shortly.
             </p>
           </div>
-          <button className="close-btn" onClick={toggleModal} aria-label="Close">
+          <button
+            className="close-btn"
+            onClick={toggleModal}
+            aria-label="Close"
+          >
             <i className="bi bi-x"></i>
           </button>
         </div>
-        
+
         <div className="popup-cta-body">
-          <form onSubmit={(e) => { e.preventDefault(); alert("Form submitted!"); toggleModal(); }}>
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              alert("Form submitted!");
+              toggleModal();
+            }}
+          >
             <div className="row g-3 mb-3">
               <div className="col-md-6">
                 <label className="form-label">First Name *</label>
-                <input type="text" className="form-control" placeholder="John" required />
+                <input
+                  type="text"
+                  className="form-control"
+                  placeholder="John"
+                  required
+                />
               </div>
               <div className="col-md-6">
                 <label className="form-label">Last Name *</label>
-                <input type="text" className="form-control" placeholder="Doe" required />
+                <input
+                  type="text"
+                  className="form-control"
+                  placeholder="Doe"
+                  required
+                />
               </div>
             </div>
 
             <div className="mb-3">
               <label className="form-label">Email Address *</label>
-              <input type="email" className="form-control" placeholder="john@company.com" required />
+              <input
+                type="email"
+                className="form-control"
+                placeholder="john@company.com"
+                required
+              />
             </div>
-            
+
             <div className="mb-3">
               <label className="form-label">Phone Number</label>
-              <input type="tel" className="form-control" placeholder="+1 (555) 000-0000" />
+              <input
+                type="tel"
+                className="form-control"
+                placeholder="+1 (555) 000-0000"
+              />
             </div>
 
             <div className="mb-4">
               <label className="form-label">How can we help you? *</label>
-              <textarea className="form-control" rows="3" placeholder="Please describe your requirements or inquiry..." required></textarea>
+              <textarea
+                className="form-control"
+                rows="3"
+                placeholder="Please describe your requirements or inquiry..."
+                required
+              ></textarea>
             </div>
-            
-            <button type="submit" className="primary-btn1 w-100 justify-content-center" style={{ border: "none" }}>
+
+            <button
+              type="submit"
+              className="primary-btn1 w-100 justify-content-center"
+              style={{ border: "none" }}
+            >
               <span>Submit Request</span>
             </button>
           </form>
@@ -105,9 +136,13 @@ export default function PopupCtaForm({
   return (
     <>
       {/* The Trigger Button */}
-      <button onClick={toggleModal} className={buttonClass} style={{ border: "none", cursor: "pointer" }}>
+      <button
+        onClick={toggleModal}
+        className={buttonClass}
+        style={{ border: "none", cursor: "pointer" }}
+      >
         <span>{buttonText}</span>
-        <span>{buttonText}</span>
+        {/* <span>{buttonText}</span> */}
         <svg className="arrow" width="23" height="23" viewBox="0 0 23 23">
           <g>
             <path d="M0.113861 0H22.9999V4.28425L4.32671 22.9997L0 18.7154L12.7524 6.08815L0.113861 6.20089V0Z" />
