@@ -37,17 +37,16 @@ export default function SectionPageLayout({
         <section className="project-details-page my-5">
           <div className="container">
             <div className="row g-lg-4 gy-5 mb-80">
-
               {/* ── Main Content ─────────────────────────────── */}
               <div className="col-lg-8">
-                <div className="blog-details-top-area mb-4">
+                <div className="blog-details-top-area mb-4 border-bottom">
                   <h1 className="h-tags position-relative px-3 mb-4">
                     {page.title}
                   </h1>
 
                   {page.bannerImage && (
                     <div
-                      className="position-relative mb-4"
+                      className="position-relative mb-4 border-bottom"
                       style={{ height: "350px" }}
                     >
                       <Image
@@ -62,15 +61,13 @@ export default function SectionPageLayout({
                   )}
                 </div>
 
-                <div className="details-content-wrapper">
+                <div className="details-content-wrapper ">
                   {page.description && (
                     <p className="mb-4">{page.description}</p>
                   )}
 
                   {page.content && (
-                    <div
-                      dangerouslySetInnerHTML={{ __html: page.content }}
-                    />
+                    <div dangerouslySetInnerHTML={{ __html: page.content }} />
                   )}
                 </div>
               </div>
@@ -79,7 +76,6 @@ export default function SectionPageLayout({
               <div className="col-lg-4">
                 <SectionSidebar sectionKey={sectionKey} nav={nav} />
               </div>
-
             </div>
           </div>
         </section>
