@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import PopupCtaForm from "src/components/ui/PopupCtaForm";
 
 // Simulated API data for popular posts
 // In a real application, you would fetch this array from your backend/CMS
@@ -75,16 +76,7 @@ export default function BlogSidebar() {
               Ready to <span>work with us?</span>
             </h2>
 
-            <Link href="/contact" className="primary-btn1 white-bg">
-              <span>Connect Today</span>
-
-              <svg className="arrow" width="23" height="23" viewBox="0 0 23 23">
-                <g>
-                  <path d="M0.113861 0H22.9999V4.28425L4.32671 22.9997L0 18.7154L12.7524 6.08815L0.113861 6.20089V0Z" />
-                  <path d="M23 22.9996V8.56848L16.8516 14.6566V22.9996H23Z" />
-                </g>
-              </svg>
-            </Link>
+            <PopupCtaForm buttonText="Get a Quote" buttonClass="primary-btn1 white-bg" />
           </div>
         </div>
       </div>

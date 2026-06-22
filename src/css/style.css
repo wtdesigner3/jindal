@@ -42452,3 +42452,126 @@ header.style-1 {
   background-size: 100px;
   background-image: url(/images/pp1.svg) !important;
 }
+
+/* ============================================================
+   Popup CTA Form Styles
+   ============================================================ */
+.popup-cta-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999999;
+  animation: overlayFadeIn 0.3s ease forwards;
+  padding: 20px;
+}
+
+.popup-cta-content {
+  background: #ffffff;
+  width: 100%;
+  max-width: 550px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  animation: modalSlideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.popup-cta-header {
+  padding: 30px 30px 20px 30px;
+  border-bottom: 1px solid #f1f5f9;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+}
+
+.popup-cta-header h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #0f172a;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.close-btn {
+  background: #f1f5f9;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #64748b;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: absolute;
+  top: 25px;
+  right: 25px;
+}
+
+.close-btn:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+  transform: rotate(90deg);
+}
+
+.popup-cta-body {
+  padding: 20px 30px 30px 30px;
+}
+
+.popup-cta-body .form-label {
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: #334155;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.popup-cta-body .form-control {
+  background-color: #f8fafc;
+  border: 1.5px solid #e2e8f0;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  color: #0f172a;
+}
+
+.popup-cta-body .form-control::placeholder {
+  color: #94a3b8;
+}
+
+.popup-cta-body .form-control:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+  background-color: #ffffff;
+  outline: none;
+}
+
+@keyframes overlayFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes modalSlideUp {
+  from { 
+    opacity: 0;
+    transform: translateY(40px) scale(0.96);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
