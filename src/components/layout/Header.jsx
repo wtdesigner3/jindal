@@ -232,7 +232,7 @@ export default function Header() {
               <Link href="/">
                 <Image
                   src="/images/logo.png"
-                  alt="Logo"
+                  alt="Jindal Metals & Alloys Ltd — Precision Stainless Steel Manufacturer"
                   width={180}
                   height={60}
                 />

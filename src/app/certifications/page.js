@@ -1,5 +1,5 @@
 import PageHeader from "src/components/layout/PageHeader";
-import GalleryWrapper from "src/components/gallery/GalleryWrapper";
+import GalleryWrapper from "src/components/features/gallery/GalleryWrapper";
 import Image from "next/image";
 
 export const metadata = {

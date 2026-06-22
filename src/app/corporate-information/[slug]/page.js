@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { getSection, getSectionPage } from "src/lib/sections";
-import SectionPageLayout from "src/components/sections/SectionPageLayout";
+import SectionPageLayout from "src/components/features/sections/SectionPageLayout";
 
 const SECTION_KEY = "corporate-information";
 

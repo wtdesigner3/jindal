@@ -1,9 +1,13 @@
 import PageHeader from "src/components/layout/PageHeader";
-import BlogCard from "src/components/blog/BlogCard";
+import BlogCard from "src/components/features/blog/BlogCard";
 
 export const metadata = {
   title: "Blog & Updates | Jindal Metals & Alloys Ltd",
-  description: "Read the latest news, updates, and articles from Jindal Metals & Alloys Ltd on manufacturing, industry trends, and more.",
+  description:
+    "Read the latest industry news, manufacturing updates, and articles from Jindal Metals & Alloys Ltd on stainless steel, production technology, and sustainability.",
+  alternates: {
+    canonical: "https://www.jindalmetals.com/blog",
+  },
 };
 
 // Dummy data for the blog listing page

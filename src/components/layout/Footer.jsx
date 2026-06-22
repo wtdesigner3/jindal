@@ -52,7 +52,7 @@ export default function Footer() {
                   <div className="address-area px-4 py-5 c-foot pb-3">
                     <Image
                       src="/images/logo.png"
-                      alt="Jindal Metals"
+                      alt="Jindal Metals & Alloys Ltd"
                       width={180}
                       height={60}
                       className="img-fluid mb-4"

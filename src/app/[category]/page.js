@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import CategorySection from "src/components/category/CategorySection";
+import CategorySection from "src/components/features/category/CategorySection";
 
 
 
@@ -79,7 +79,11 @@ const categories = [
     },
 ];
 
-
+// ─── SSG: Pre-build all known category pages at build time ─────
+export async function generateStaticParams() {
+  // In production: const cats = await fetch('.../api/categories').then(r => r.json());
+  return categories.map((cat) => ({ category: cat.slug }));
+}
 
 export async function generateMetadata({ params }) {
     const { category: categorySlug } = await params;
@@ -164,10 +168,11 @@ export default async function CategoryPage({ params }) {
 
             <section className="home1-counter-section">
                 <div className="container">
-                    <div className="counter-wrap text-center">
-                        <div className="row gy-4">
-                            <p>{category.content}</p>
-                        </div>
+                    <div className="counter-wrap">
+                        <div
+                            className="category-content prose max-w-none"
+                            dangerouslySetInnerHTML={{ __html: category.content }}
+                        />
                     </div>
                 </div>
             </section>

@@ -1,5 +1,5 @@
 import PageHeader from "src/components/layout/PageHeader";
-import GalleryWrapper from "src/components/gallery/GalleryWrapper";
+import GalleryWrapper from "src/components/features/gallery/GalleryWrapper";
 import Image from "next/image";
 
 export const metadata = {
@@ -90,65 +90,6 @@ export default function GalleryPage() {
         </div>
       </section>
 
-      {/* Embedded CSS for animations and beautiful hover effects */}
-      <style dangerouslySetInnerHTML={{__html: `
-        @keyframes fadeInUp {
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-        
-        .gallery-item {
-          cursor: pointer;
-          background-color: #000; /* Prevents white flash on scale */
-        }
-
-        .gallery-img {
-          transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-
-        .gallery-item:hover .gallery-img {
-          transform: scale(1.1);
-          opacity: 0.8;
-        }
-
-        .gallery-overlay {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 100%);
-          opacity: 0;
-          transition: all 0.4s ease;
-        }
-
-        .gallery-item:hover .gallery-overlay {
-          opacity: 1;
-        }
-
-        .gallery-icon {
-          transform: scale(0.5) translateY(20px);
-          transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-
-        .gallery-item:hover .gallery-icon {
-          transform: scale(1) translateY(0);
-        }
-
-        .gallery-title {
-          transform: translateY(20px);
-          opacity: 0;
-          transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-          transition-delay: 0.05s;
-        }
-
-        .gallery-item:hover .gallery-title {
-          transform: translateY(0);
-          opacity: 1;
-        }
-      `}} />
     </>
   );
 }

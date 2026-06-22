@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import PageHeader from "src/components/layout/PageHeader";
-import BlogSidebar from "src/components/blog/BlogSidebar";
+import BlogSidebar from "src/components/features/blog/BlogSidebar";
 
 // Dummy data fetching function for blog posts
 // In a real scenario, this would fetch from a database or CMS based on the slug.
@@ -92,7 +92,6 @@ export default async function BlogDetailsPage({ params }) {
                       fill
                       className="object-fit-cover rounded"
                       sizes="(max-width: 768px) 100vw, 66vw"
-                      priority
                     />
                   </div>
                 )}
